@@ -84,6 +84,7 @@ fi
 
 
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+export XDG_CONFIG_HOME="$HOME/.config"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
