@@ -73,7 +73,7 @@ prompt_segment() {
 }
 
 prompt_blank() {
-    echo -n "%F{blue} "
+    echo -n "%F{blue}  "
 }
 
 # End the prompt, closing any open segments
