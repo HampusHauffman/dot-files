@@ -37,7 +37,10 @@ _config() {
 # Add 'config' alias completion
 compdef _config config
 
-export EDITOR='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export GIT_EDITOR='nvim'
+
 plugins=(git)
 eval "$(mcfly init zsh)"
 export MCFLY_KEY_SCHEME=vim
