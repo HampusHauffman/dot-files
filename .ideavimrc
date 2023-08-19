@@ -1,0 +1,59 @@
+set scrolloff=5
+
+set clipboard+=unnamed
+set rnu
+set nu
+set incsearch
+
+map Q gq
+map ö $
+map 0 ^
+imap jk <Esc>
+imap kj <Esc>
+imap <c-h> <left>
+imap <c-l> <right>
+
+imap <c-j> <down>
+imap <c-k> <up>
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+unmap <c-t>
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"" map <leader>f <Action>(ReformatCode)
+"" map <leader>e <Action>(RecentFiles)
+"" map <leader>r <Action>(RenameElement)
+"" map <leader>n <Action>(SelectInProjectView)
+"" map <leader>c <Action>(ShowIntentionActions)
+"" map <leader>s <Action>(SaveAll)
+"" map <c-r> <Action>(Refactorings.QuickListPopupAction)
+map gd <Action>(GotoDeclaration)
+map gr <Action>(GotoDeclaration)
+map fg <Action>(FindInPath)
+map ff <Action>(GotoFile)
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
+map <c-t> <Action>(Refactorings.QuickListPopupAction)
+"" map / <Action>(Find)
+"" These also need to be set in intellij to allow closing of window with the same button
+"" map <c-z> <Action>(ToggleDistractionFreeMode)
+"" map <c-t> <Action>(ActivateTerminalToolWindow)
+"" map <c-d> <Action>(ActivateDatabaseToolWindow)
+"" map <c-n> <Action>(ActivateProjectToolWindow)
+"" map <S-up> <Action>(EditorSelectWord)
+"" map <S-down> <Action>(EditorUnSelectWord)
+
+
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+" Find more examples here: https://jb.gg/share-ideavimrc
+
