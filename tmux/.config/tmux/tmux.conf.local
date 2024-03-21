@@ -4,7 +4,9 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
-# mouse
+bind C-a send-prefix -2
+
+# Use the mouse
 set -g mouse
 # --  VIM NAVIGATION ---------------------------------------------------------- 
 # Smart pane switching with awareness of Vim splits.
@@ -21,6 +23,7 @@ if-shell -b '[ "$(echo "$tmux_version < 3.0" | bc)" = 1 ]' \
 if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
     "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
 
+# Use navigation keys without prefix
 bind-key -T copy-mode-vi 'C-h' select-pane -L
 bind-key -T copy-mode-vi 'C-j' select-pane -D
 bind-key -T copy-mode-vi 'C-k' select-pane -U
@@ -353,27 +356,27 @@ tmux_conf_battery_bar_length="auto"
 #   - gradient (default)
 #   - heat
 #   - "colour_full_fg,colour_empty_fg,colour_bg"
-tmux_conf_battery_bar_palette="gradient"
-tmux_conf_battery_bar_palette="#000000,#ffffff,#000000"   # red, white, black
+#tmux_conf_battery_bar_palette="gradient"
+#tmux_conf_battery_bar_palette="#000000,#ffffff,#000000"   # red, white, black
 
 # battery hbar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - "colour_low,colour_half,colour_full"
 #tmux_conf_battery_hbar_palette="gradient"
-tmux_conf_battery_hbar_palette="#000000,#000000,#6272a4"  # red, orange, green
+#tmux_conf_battery_hbar_palette="#000000,#000000,#6272a4"  # red, orange, green
 
 # battery vbar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - "colour_low,colour_half,colour_full"
 #tmux_conf_battery_vbar_palette="heat"
-tmux_conf_battery_vbar_palette="#000000,#000000,#6272a4"  # red, orange, green
+#tmux_conf_battery_vbar_palette="#000000,#000000,#6272a4"  # red, orange, green
 #tmux_conf_battery_vbar_palette="#d70000,#ff5f00,#5fff00"  # red, orange, green
 
 # symbols used to indicate whether battery is charging or discharging
 tmux_conf_battery_status_charging="󰂅 "       # U+2191
-tmux_conf_battery_status_discharging=" "    # U+2193
+tmux_conf_battery_status_discharging="󰂂"    # U+2193
 #tmux_conf_battery_status_charging="🔌"     # U+1F50C
 #tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
