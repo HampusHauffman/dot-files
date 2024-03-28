@@ -19,7 +19,13 @@ export VISUAL='nvim'
 export GIT_EDITOR='nvim'
 
 #Fuck
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
+
+#Zoxide
+eval "$(zoxide init zsh)"
+
+# fzf
+eval "$(fzf --zsh)"
 
 #Flutter
 export FLUTTER_ROOT="$(mise where flutter)"
@@ -31,16 +37,18 @@ export LANG=en_US.UTF-8
 
 source $ZSH/oh-my-zsh.sh
 
-alias v="nvim"
+alias v=nvim
 
-alias l="eza"
-alias ls="eza --color=always --icons=always"
-alias la="eza -la --color=always --icons=always"
-alias ll="eza -lah --color=always --icons=always"
-alias ls="eza --color=always --icons=always"
+alias l=eza
+alias ls=eza --color=always --icons=always
+alias la=eza -la --color=always --icons=always
+alias ll=eza -lah --color=always --icons=always
+alias ls=eza --color=always --icons=always
 
-alias f="fuck"
+alias f=fuck
 
-alias cat="bat"
+alias cat=bat
+
+alias cd=z
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
