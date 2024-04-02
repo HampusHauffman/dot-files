@@ -5,8 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# get the last line of the command "where mise" and use it to run the activate script
+eval "$(mise activate zsh)"
 #eval "$(/usr/local/bin/mise activate zsh)"
-eval "$(~/.local/bin/mise activate zsh)"
+#eval "$(~/.local/bin/mise activate zsh)"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
