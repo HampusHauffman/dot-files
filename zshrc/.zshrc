@@ -8,11 +8,9 @@ fi
 #eval "$(/usr/local/bin/mise activate zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git)
-
 
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -51,4 +49,10 @@ alias cat=bat
 
 alias cd=z
 
+# Alias for gh copilot
+unalias gcs
+alias gcs="gh copilot suggest"
+alias gce="gh copilot explain"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
