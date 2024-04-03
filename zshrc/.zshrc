@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias v="nvim"
 
-alias l=eza
+alias l="eza --color=always --icons=always"
 alias ls="eza --color=always --icons=always"
 alias la="eza -la --color=always --icons=always"
 alias ll="eza -lah --color=always --icons=always"
