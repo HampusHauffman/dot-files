@@ -37,19 +37,19 @@ export LANG=en_US.UTF-8
 
 source $ZSH/oh-my-zsh.sh
 
-alias v=nvim
+alias v="nvim"
 
 alias l=eza
-alias ls=eza --color=always --icons=always
-alias la=eza -la --color=always --icons=always
-alias ll=eza -lah --color=always --icons=always
-alias ls=eza --color=always --icons=always
+alias ls="eza --color=always --icons=always"
+alias la="eza -la --color=always --icons=always"
+alias ll="eza -lah --color=always --icons=always"
+alias ls="eza --color=always --icons=always"
 
-alias f=fuck
+alias f="fuck"
 
-alias cat=bat
+alias cat="bat"
 
-alias cd=z
+alias cd="z"
 
 # Alias for gh copilot
 unalias gcs
