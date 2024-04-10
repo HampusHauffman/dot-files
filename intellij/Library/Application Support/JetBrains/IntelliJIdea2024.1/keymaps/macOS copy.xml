@@ -1,0 +1,114 @@
+<keymap version="1" name="macOS copy" parent="Mac OS X 10.5+">
+  <action id="$Redo">
+    <keyboard-shortcut first-keystroke="meta y" />
+  </action>
+  <action id="ChangesView.Move" />
+  <action id="Console.TableResult.Reload" />
+  <action id="Editor Redo">
+    <keyboard-shortcut first-keystroke="meta y" />
+  </action>
+  <action id="EditorCutLineEnd" />
+  <action id="EditorDown">
+    <keyboard-shortcut first-keystroke="down" />
+    <keyboard-shortcut first-keystroke="ctrl n" />
+    <keyboard-shortcut first-keystroke="ctrl j" />
+  </action>
+  <action id="EditorLeft">
+    <keyboard-shortcut first-keystroke="left" />
+    <keyboard-shortcut first-keystroke="ctrl b" />
+    <keyboard-shortcut first-keystroke="ctrl h" />
+  </action>
+  <action id="EditorRight">
+    <keyboard-shortcut first-keystroke="right" />
+    <keyboard-shortcut first-keystroke="ctrl f" />
+    <keyboard-shortcut first-keystroke="ctrl l" />
+  </action>
+  <action id="EditorScrollToCenter" />
+  <action id="EditorUp">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
+  <action id="GitLab.Merge.Request.List.Refresh" />
+  <action id="GitLab.Merge.Request.Refresh" />
+  <action id="Github.PullRequest.Details.Reload" />
+  <action id="GotoAction" />
+  <action id="GuiDesigner.QuickJavadoc">
+    <keyboard-shortcut first-keystroke="f1" />
+    <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="Jdbc.OpenConsole.New" />
+  <action id="Jdbc.OpenConsole.New.Generate" />
+  <action id="List-selectPreviousRow">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
+  <action id="NavBar-selectUp">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="ctrl right" />
+  </action>
+  <action id="PopupMenu-selectPrevious">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="ctrl left" />
+  </action>
+  <action id="QuickImplementations">
+    <keyboard-shortcut first-keystroke="alt space" />
+  </action>
+  <action id="QuickJavaDoc">
+    <keyboard-shortcut first-keystroke="f1" />
+    <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="Refresh" />
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="meta r" />
+  </action>
+  <action id="RenameFile">
+    <keyboard-shortcut first-keystroke="meta r" />
+  </action>
+  <action id="Replace" />
+  <action id="Rerun" />
+  <action id="SplitChooser.SplitTop">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+  </action>
+  <action id="Svn.RefreshWorkingCopies" />
+  <action id="Table-selectPreviousRow">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
+  <action id="Terminal.SelectBlockAbove">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="meta up" />
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
+  <action id="Terminal.ShowDocumentation">
+    <keyboard-shortcut first-keystroke="f1" />
+    <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="ToggleZenMode">
+    <keyboard-shortcut first-keystroke="shift meta z" />
+  </action>
+  <action id="Tree-selectPrevious">
+    <keyboard-shortcut first-keystroke="up" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
+  <action id="TypeHierarchy" />
+  <action id="TypeHierarchyBase.BaseOnThisType" />
+  <action id="Vcs.Log.Refresh" />
+  <action id="Vcs.Log.ShowTooltip">
+    <keyboard-shortcut first-keystroke="f1" />
+    <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="Vcs.MoveChangedLinesToChangelist" />
+  <action id="Vcs.RefreshFileHistory" />
+</keymap>
