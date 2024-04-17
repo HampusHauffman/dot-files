@@ -58,6 +58,7 @@ alias gce="gh copilot explain"
 
 alias gp="git pull"
 alias gP="git push"
+alias gcm="git commit --message"
 
 alias ag="alias | grep"
 
