@@ -3,8 +3,13 @@
     <keyboard-shortcut first-keystroke="meta y" />
     <keyboard-shortcut first-keystroke="ctrl r" />
   </action>
+  <action id="ActivateBigDataToolWindowToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl meta b" />
+  </action>
   <action id="ActivateBookmarksToolWindow" />
+  <action id="ActivateDebugToolWindow" />
   <action id="ActivateFindToolWindow" />
+  <action id="ActivateStructureToolWindow" />
   <action id="ActivateTerminalToolWindow">
     <keyboard-shortcut first-keystroke="meta 2" />
   </action>
@@ -42,6 +47,9 @@
   </action>
   <action id="FileChooser.GotoModule" />
   <action id="FileChooser.GotoProject" />
+  <action id="Git.Menu">
+    <keyboard-shortcut first-keystroke="ctrl g" />
+  </action>
   <action id="GitLab.Merge.Request.List.Refresh" />
   <action id="GitLab.Merge.Request.Refresh" />
   <action id="Github.PullRequest.Details.Reload" />
@@ -49,6 +57,10 @@
   <action id="GuiDesigner.QuickJavadoc">
     <keyboard-shortcut first-keystroke="f1" />
     <mouse-shortcut keystroke="control button2" />
+  </action>
+  <action id="HideAllWindows">
+    <keyboard-shortcut first-keystroke="shift meta f12" />
+    <keyboard-shortcut first-keystroke="shift meta z" />
   </action>
   <action id="Jdbc.OpenConsole.New" />
   <action id="Jdbc.OpenConsole.New.Generate" />
@@ -89,11 +101,15 @@
   <action id="Replace" />
   <action id="Rerun" />
   <action id="Run" />
+  <action id="SelectNextOccurrence" />
   <action id="SplitChooser.SplitTop">
     <keyboard-shortcut first-keystroke="up" />
     <keyboard-shortcut first-keystroke="ctrl p" />
   </action>
   <action id="Svn.RefreshWorkingCopies" />
+  <action id="Switcher" />
+  <action id="SwitcherIterateItems" />
+  <action id="SwitcherRecentEditedChangedToggleCheckBox" />
   <action id="Table-selectPreviousRow">
     <keyboard-shortcut first-keystroke="up" />
     <keyboard-shortcut first-keystroke="ctrl p" />
@@ -110,7 +126,7 @@
     <mouse-shortcut keystroke="control button2" />
   </action>
   <action id="ToggleZenMode">
-    <keyboard-shortcut first-keystroke="shift meta z" />
+    <keyboard-shortcut first-keystroke="ctrl meta z" />
   </action>
   <action id="Tree-selectPrevious">
     <keyboard-shortcut first-keystroke="up" />
@@ -127,5 +143,9 @@
   </action>
   <action id="Vcs.MoveChangedLinesToChangelist" />
   <action id="Vcs.RefreshFileHistory" />
+  <action id="copilot.chat.show">
+    <keyboard-shortcut first-keystroke="shift ctrl c" />
+    <keyboard-shortcut first-keystroke="meta 5" />
+  </action>
   <action id="copilot.disposeInlays" />
 </keymap>
