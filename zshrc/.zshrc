@@ -41,7 +41,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export LANG=en_US.UTF-8
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 alias v="nvim"
 
@@ -58,13 +58,17 @@ alias cat="bat"
 alias cd="z"
 
 # Alias for gh copilot
-unalias gcs
+#unalias gcs
 alias gcs="gh copilot suggest"
 alias gce="gh copilot explain"
 
 alias gp="git pull"
 alias gP="git push"
 alias gcm="git commit --message"
+alias ga="git add"
+alias gs="git status"
+alias gS="git stash"
+alias gSp="git stash pop"
 
 alias ag="alias | grep"
 
@@ -73,3 +77,6 @@ alias ag="alias | grep"
 
 export GPG_TTY=$(tty)
 
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+export GPG_TTY=$(tty)
