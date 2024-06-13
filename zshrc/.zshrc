@@ -62,13 +62,19 @@ alias cd="z"
 alias gcs="gh copilot suggest"
 alias gce="gh copilot explain"
 
+alias g="git "
 alias gp="git pull"
 alias gP="git push"
+alias gcm="git commit"
 alias gcm="git commit --message"
 alias ga="git add"
 alias gs="git status"
 alias gS="git stash"
 alias gSp="git stash pop"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 alias ag="alias | grep"
 
@@ -78,5 +84,7 @@ alias ag="alias | grep"
 export GPG_TTY=$(tty)
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+export GPG_TTY=$(tty)
 
 export GPG_TTY=$(tty)

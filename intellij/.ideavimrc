@@ -32,17 +32,21 @@ map <leader>r <Action>(RenameElement)
 map <leader>n <Action>(SelectInProjectView)
 map <leader>c <Action>(ShowIntentionActions)
 map <leader>s <Action>(SaveAll)
-""map <c-r> <Action>(Refactorings.QuickListPopupAction)
 
 map gd <Action>(GotoDeclaration)
+map gi <action>(GotoImplementation)
 map gr <Action>(GotoDeclaration)
 map fg <Action>(FindInPath)
 map ff <Action>(GotoFile)
+
 map <c-n> <Action>(GotoNextError)
 map <c-p> <Action>(GotoPreviousError)
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
 map <c-t> <action>(Refactorings.QuickListPopupAction)
+
+map <s-k> <Action>(ShowHoverInfo)
+
 vmap <c-k> <action>(EditorSelectWord)
 vmap <c-j> <action>(EditorUnSelectWord)
 ""map <c-t> <Action>(Refactorings.QuickListPopupAction)
