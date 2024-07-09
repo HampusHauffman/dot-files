@@ -47,6 +47,11 @@ map <c-t> <action>(Refactorings.QuickListPopupAction)
 
 map <s-k> <Action>(ShowHoverInfo)
 
+map / <Action>(Find)
+
+nmap <c-j> <Action>(MethodDown)
+nmap <c-k> <Action>(MethodUp)
+
 vmap <c-k> <action>(EditorSelectWord)
 vmap <c-j> <action>(EditorUnSelectWord)
 ""map <c-t> <Action>(Refactorings.QuickListPopupAction)

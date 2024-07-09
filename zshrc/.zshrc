@@ -45,6 +45,8 @@ export LANG=en_US.UTF-8
 
 alias v="nvim"
 
+alias killport='f() { kill $(lsof -t -i:$1); unset -f f; }; f'
+
 alias l="eza --color=always --icons=always"
 alias ls="eza --color=always --icons=always"
 alias la="eza -la --color=always --icons=always"
