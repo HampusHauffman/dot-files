@@ -45,7 +45,7 @@ map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
 map <c-t> <action>(Refactorings.QuickListPopupAction)
 
-map <s-k> <Action>(ShowHoverInfo)
+""map <s-k> <Action>(ShowHoverInfo)
 
 map / <Action>(Find)
 
