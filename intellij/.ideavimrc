@@ -52,7 +52,6 @@ map <c-p> <Action>(GotoPreviousError)
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
 
-"" Show hover info
 map <s-k> <Action>(ShowHoverInfo)
 
 " Rebind find
