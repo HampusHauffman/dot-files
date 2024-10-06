@@ -24,45 +24,47 @@ nnoremap <c-k> <c-w>k
 unmap <c-t>
 
 let mapleader ="\<Space>"
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-map <leader>f <Action>(ReformatCode)
+
+"" Save and format (Formats on save)
+map <leader>s <Action>(SaveAll)
+map <leader>f <Action>(ReformatCode)<Action>(OptimizeImports)
+
 map <leader>e <Action>(RecentFiles)
 map <leader>r <Action>(RenameElement)
 map <leader>n <Action>(SelectInProjectView)
 map <leader>c <Action>(ShowIntentionActions)
-map <leader>s <Action>(SaveAll)
+map <leader>b <Action>(ToggleLineBreakpoint)
 
+"" Navigate between implementations
 map gd <Action>(GotoDeclaration)
 map gi <action>(GotoImplementation)
 map gr <Action>(GotoDeclaration)
+
+"" Find in path and goto file
 map fg <Action>(FindInPath)
 map ff <Action>(GotoFile)
 
+"" Navigate between errors
 map <c-n> <Action>(GotoNextError)
 map <c-p> <Action>(GotoPreviousError)
+
+"" Navigate back and forward
 map <c-o> <Action>(Back)
 map <c-i> <Action>(Forward)
-map <c-t> <action>(Refactorings.QuickListPopupAction)
 
+"" Show hover info
 map <s-k> <Action>(ShowHoverInfo)
 
+" Rebind find
 map / <Action>(Find)
 
+"" Navigate up and down between methods when in normal mode
 nmap <c-j> <Action>(MethodDown)
 nmap <c-k> <Action>(MethodUp)
 
+"" Context select when in visual mode
 vmap <c-k> <action>(EditorSelectWord)
 vmap <c-j> <action>(EditorUnSelectWord)
-""map <c-t> <Action>(Refactorings.QuickListPopupAction)
-"" map / <Action>(Find)
-"" These also need to be set in intellij to allow closing of window with the same button
-"" map <c-z> <Action>(ToggleDistractionFreeMode)
-"" map <c-t> <Action>(ActivateTerminalToolWindow)
-"" map <c-d> <Action>(ActivateDatabaseToolWindow)
-"" map <c-n> <Action>(ActivateProjectToolWindow)
-"" map <S-up> <Action>(EditorSelectWord)
-"" map <S-down> <Action>(EditorUnSelectWord)
 
 
 
@@ -70,6 +72,5 @@ vmap <c-j> <action>(EditorUnSelectWord)
 "map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
 " Find more examples here: https://jb.gg/share-ideavimrc
 
