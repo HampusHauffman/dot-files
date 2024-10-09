@@ -6,6 +6,7 @@ $username\
 $directory\
 [](fg:#ff79c6 bg:#ffb86c)\
 $git_branch\
+$git_status\
 [](fg:#ffb86c bg:#50fa7b)\
 $c\
 $elixir\
@@ -21,7 +22,7 @@ $rust\
 $scala\
 [](fg:#50fa7b bg:#8be9fd)\
 $docker_context\
-[](fg:#8be9fd bg:#6272a4)\
+[](fg:#8be9fd bg:#6272a4)\
 $time\
 [](fg:#6272a4) \
 """
@@ -79,9 +80,7 @@ format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:#ffb86c fg:#282a36"
-ahead = '⇡${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
+format = '[$all_status $ahead_behind ]($style)'
 
 [golang]
 symbol = " "
