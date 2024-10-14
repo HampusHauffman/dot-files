@@ -8,7 +8,6 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(mise activate zsh)"
 #eval "$(/usr/local/bin/mise activate zsh)"
 #eval "$(~/.local/bin/mise activate zsh)"
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 export GIT_EDITOR='nvim'
@@ -67,6 +66,9 @@ alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias grh="git reset -hard"
 
+alias gconfe="git config user.email"
+alias gconfu="git config user.name"
+
 alias ag="alias | grep"
 
 export GPG_TTY=$(tty)
@@ -74,3 +76,6 @@ export GPG_TTY=$(tty)
 export GPG_TTY=$(tty)
 
 export GPG_TTY=$(tty)
+
+# Created by `pipx` on 2024-10-10 07:32:26
+export PATH="$PATH:/Users/hampus/.local/bin"
