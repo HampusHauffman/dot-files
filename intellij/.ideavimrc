@@ -40,6 +40,8 @@ map gd <Action>(GotoDeclaration)
 map gi <action>(GotoImplementation)
 map gr <Action>(GotoDeclaration)
 
+map zz <Action>(HideAllWindows)
+
 "" Find in path and goto file
 map fg <Action>(FindInPath)
 map ff <Action>(GotoFile)

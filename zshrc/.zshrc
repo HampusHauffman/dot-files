@@ -3,6 +3,8 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# Autocomplete
+autoload -Uz compinit && compinit
 
 # get the last line of the command "where mise" and use it to run the activate script
 eval "$(mise activate zsh)"
@@ -62,20 +64,35 @@ alias gS="git stash"
 alias gSp="git stash pop"
 alias gcb="git checkout -b"
 alias gco="git checkout"
+alias gr="git rebase"
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
+alias gfP="git fetch && git push --force-with-lease"
 alias grh="git reset -hard"
 
 alias gconfe="git config user.email"
 alias gconfu="git config user.name"
 
+alias zpr="git diff origin/main | zllm 'generate a PR description. Create a 1-2 sentence description and then include bullet points for the headings Added, Changed, and Removed. You may skip the headings if there is no content for them.'"
+
 alias ag="alias | grep"
 
 export GPG_TTY=$(tty)
 
-export GPG_TTY=$(tty)
+# Add this function to your .zshrc file
+glb() {
+  # Default to 5 if no argument is provided
+  local count=${1:-5}
+  local i=0
 
-export GPG_TTY=$(tty)
+  while [ "$i" -lt "$count" ]; do
+    i=$((i + 1))
+    echo -n "$i. "
+    git rev-parse --symbolic-full-name "@{-${i}}" 2>/dev/null || break
+  done
+}
+
 
 # Created by `pipx` on 2024-10-10 07:32:26
 export PATH="$PATH:/Users/hampus/.local/bin"
+export PATH="/usr/local/go/bin:$PATH"
