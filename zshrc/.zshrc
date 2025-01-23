@@ -69,6 +69,7 @@ alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 alias gfP="git fetch && git push --force-with-lease"
 alias grh="git reset -hard"
+alias gca="git commit --amend --no-edit"
 
 alias gconfe="git config user.email"
 alias gconfu="git config user.name"
@@ -79,9 +80,7 @@ alias ag="alias | grep"
 
 export GPG_TTY=$(tty)
 
-# Add this function to your .zshrc file
 glb() {
-  # Default to 5 if no argument is provided
   local count=${1:-5}
   local i=0
 
