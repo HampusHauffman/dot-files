@@ -7,7 +7,7 @@
 bind C-a send-prefix -2
 
 # Use the mouse
-set -g mouse
+set -g mouse on
 # --  VIM NAVIGATION ---------------------------------------------------------- 
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
