@@ -1,8 +1,15 @@
 ### Hampus' dotfiles
 
 ## This uses Stow to link dotfiles via symlinks.
-use stow -t ~/ [The folders that should be stowed]
+Use stow -t ~/ [The folders that should be stowed]
 ```sh
 stow -t ~/ zshrc tmux
 ```
+
+## Brew
+To install dependant programs for mac use
+```sh
+brew bundle
+``` 
+In this directory
 
