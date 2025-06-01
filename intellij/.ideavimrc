@@ -39,6 +39,7 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map gd <Action>(GotoDeclaration)
 map gi <action>(GotoImplementation)
 map gr <Action>(GotoDeclaration)
+map gR <Action>(FindUsages)
 
 map zz <Action>(HideAllWindows)
 
