@@ -24,6 +24,10 @@ eval "$(zoxide init zsh)"
 # FZF fuzzy finder
 eval "$(fzf --zsh)"
 
+# Enables up-arrow history search matching current input
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
 # ===== Aliases =====
 # Neovim
 alias v="nvim"
