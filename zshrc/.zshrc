@@ -1,6 +1,10 @@
 # Autocomplete
 autoload -Uz compinit && compinit
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 # Environment variables
 export EDITOR='nvim'
 export VISUAL='nvim'
