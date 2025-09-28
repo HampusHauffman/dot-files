@@ -77,7 +77,7 @@ alias gconfe="git config user.email"
 alias gconfu="git config user.name"
 
 # zllm (AI) helpers
-alias zpr="git diff origin/main | zllm 'generate a PR description. Create a 1-2 sentence description and then include bullet points for the headings Added, Changed, and Removed. You may skip the headings if there is no content for them.'"
+alias zpr="git diff origin/main | zllm  -m   bedrock/anthropic.claude-3-7-sonnet-20250219-v1:0 'generate a PR description. Create a 1-2 sentence description and then include bullet points for the headings Added, Changed, and Removed. You may skip the headings if there is no content for them.'"
 alias zim="git diff origin/main | zllm 'Please carefully go through this PR and find any improvements to make this a very clean PR'"
 
 # Utility
@@ -102,3 +102,4 @@ glb() {
 if [ -f "$HOME/.zshrc.local" ]; then
   source "$HOME/.zshrc.local"
 fi
+

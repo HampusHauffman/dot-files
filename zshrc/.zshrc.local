@@ -22,6 +22,12 @@ export PATH="/usr/local/go/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/bin/python3"
 alias python="/opt/homebrew/bin/python3"
 
+# Bin
+export PATH="$HOME/bin:$PATH"
+
+#
+export PATH="$HOME/.continue:$PATH"
+
 # ===== Google Cloud SDK =====
 # Updates PATH for Google Cloud SDK
 if [ -f '/Users/hampus/Downloads/google-cloud-sdk/path.zsh.inc' ]; then
@@ -32,3 +38,4 @@ fi
 if [ -f '/Users/hampus/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then
   . '/Users/hampus/Downloads/google-cloud-sdk/completion.zsh.inc'
 fi
+
