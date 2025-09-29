@@ -8,6 +8,7 @@ brew "thefuck"
 brew "zoxide"
 brew "fzf"
 brew "ripgrep"
+brew "wget"
 
 # File management and viewers
 brew "eza"
@@ -18,16 +19,20 @@ brew "rm-improved"
 brew "git"
 brew "gh"
 
-# Text editor
-brew "neovim"
+# Installers
+brew "rustup"
 
 # Terminal
 cask "kitty"
 brew "tmux"
 
+# Text editor
+brew "neovim"
+
 # Development tools
 brew "mise"
 
+# Favorite casks
 cask "arc"
 cask "spotify"
 
