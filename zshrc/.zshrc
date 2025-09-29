@@ -3,7 +3,7 @@ autoload -Uz compinit && compinit
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
-bindkey '^X^E' edit-command-line
+bindkey '^E' edit-command-line
 
 # Environment variables
 export EDITOR='nvim'
@@ -76,26 +76,9 @@ alias gca="git commit --amend --no-edit"
 alias gconfe="git config user.email"
 alias gconfu="git config user.name"
 
-# zllm (AI) helpers
-alias zpr="git diff origin/main | zllm  -m   bedrock/anthropic.claude-3-7-sonnet-20250219-v1:0 'generate a PR description. Create a 1-2 sentence description and then include bullet points for the headings Added, Changed, and Removed. You may skip the headings if there is no content for them.'"
-alias zim="git diff origin/main | zllm 'Please carefully go through this PR and find any improvements to make this a very clean PR'"
-
 # Utility
 alias ag="alias | grep"
 alias killport='f() { kill $(lsof -t -i:$1); unset -f f; }; f'
-
-# ===== Functions =====
-# List git branches with numbers
-glb() {
-  local count=${1:-5}
-  local i=0
-
-  while [ "$i" -lt "$count" ]; do
-    i=$((i + 1))
-    echo -n "$i. "
-    git rev-parse --symbolic-full-name "@{-${i}}" 2>/dev/null || break
-  done
-}
 
 # ===== Load Local Configuration =====
 # Load machine-specific configuration if it exists

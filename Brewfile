@@ -7,6 +7,8 @@ brew "starship"
 brew "thefuck"
 brew "zoxide"
 brew "fzf"
+brew "fd"
+brew "ripgrep"
 
 # File management and viewers
 brew "eza"
@@ -16,6 +18,7 @@ brew "rm-improved"
 # Version control
 brew "git"
 brew "gh"
+brew "lazygit"
 
 # Text editor
 brew "neovim"
@@ -27,3 +30,4 @@ brew "tmux"
 # Development tools
 brew "mise"
 
+cask "bitwarden"
