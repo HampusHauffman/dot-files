@@ -18,6 +18,7 @@ brew "rm-improved"
 # Version control
 brew "git"
 brew "gh"
+brew "lazygit"
 
 # Installers
 brew "rustup"
