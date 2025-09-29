@@ -1,28 +1,29 @@
 
 # Brewfile for tools used in .zshrc
+brew "stow"
 
 # Shell enhancements
-brew "starship"        # Shell prompt
-brew "thefuck"         # Command correction
-brew "zoxide"          # Smart directory jumper
-brew "fzf"             # Fuzzy finder
+brew "starship"
+brew "thefuck"
+brew "zoxide"
+brew "fzf"
 
 # File management and viewers
-brew "eza"             # ls replacement
-brew "bat"             # cat replacement
+brew "eza"
+brew "bat"
+brew "rm-improved"
 
 # Version control
 brew "git"
-brew "gh"              # GitHub CLI
+brew "gh"
 
 # Text editor
 brew "neovim"
 
 # Terminal
-#cask "kitty"
+cask "kitty"
+brew "tmux"
 
 # Development tools
-brew "mise"            # Runtime version manager
+brew "mise"
 
-# Dependencies
-brew "gnupg"           # For GPG_TTY
