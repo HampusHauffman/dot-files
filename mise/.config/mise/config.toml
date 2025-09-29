@@ -1,0 +1,7 @@
+[tools]
+cargo = "latest"
+go = "latest"
+java = "latest"
+node = "latest"
+npm = "latest"
+rust = "latest"

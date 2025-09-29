@@ -9,6 +9,7 @@ brew "zoxide"
 brew "fzf"
 brew "fd"
 brew "ripgrep"
+brew "wget"
 
 # File management and viewers
 brew "eza"
@@ -20,14 +21,20 @@ brew "git"
 brew "gh"
 brew "lazygit"
 
-# Text editor
-brew "neovim"
+# Installers
+brew "rustup"
 
 # Terminal
 cask "kitty"
 brew "tmux"
 
+# Text editor
+brew "neovim"
+
 # Development tools
 brew "mise"
 
 cask "bitwarden"
+# Favorite casks
+cask "arc"
+cask "spotify"
