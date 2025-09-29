@@ -7,6 +7,7 @@ brew "starship"
 brew "thefuck"
 brew "zoxide"
 brew "fzf"
+brew "ripgrep"
 
 # File management and viewers
 brew "eza"
@@ -26,4 +27,7 @@ brew "tmux"
 
 # Development tools
 brew "mise"
+
+cask "arc"
+cask "spotify"
 
