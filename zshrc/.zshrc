@@ -12,9 +12,7 @@ export GIT_EDITOR='nvim'
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 
-# ===== Tool Initialization =====
-# Mise runtime version manager
-eval "$(mise activate zsh)"
+# ===== Tool Initialization ===== Mise runtime version manager eval "$(mise activate zsh)"
 
 # Starship prompt
 eval "$(starship init zsh)"
@@ -27,6 +25,15 @@ eval "$(zoxide init zsh)"
 
 # FZF fuzzy finder
 eval "$(fzf --zsh)"
+
+# Allows use if y for search and change dir using yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 # Enables up-arrow history search matching current input
 bindkey '^[[A' history-search-backward

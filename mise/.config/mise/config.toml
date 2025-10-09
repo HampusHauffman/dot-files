@@ -1,7 +1,8 @@
 [tools]
 cargo = "latest"
 go = "latest"
-java = "latest"
+java = "17"
 node = "latest"
 npm = "latest"
+python = "latest"
 rust = "latest"

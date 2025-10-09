@@ -15,6 +15,7 @@ brew "wget"
 brew "eza"
 brew "bat"
 brew "rm-improved"
+brew "yazi"
 
 # Version control
 brew "git"
