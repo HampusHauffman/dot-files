@@ -21,6 +21,7 @@ brew "yazi"
 brew "git"
 brew "gh"
 brew "lazygit"
+brew "kubernetes-cli"
 
 # Installers
 brew "rustup"
