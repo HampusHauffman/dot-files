@@ -66,6 +66,7 @@ alias f="fuck"
 alias gcs="gh copilot suggest"
 alias gce="gh copilot explain"
 
+alias gg="lazygit"
 # Git aliases
 alias g="git "
 alias gp="git pull"
