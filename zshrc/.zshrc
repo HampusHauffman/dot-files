@@ -12,7 +12,7 @@ export GIT_EDITOR='nvim'
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 
-# ===== Tool Initialization ===== Mise runtime version manager 
+# ===== Tool Initialization ===== Mise runtime version manager
 eval "$(mise activate zsh)"
 
 # Starship prompt
@@ -34,7 +34,7 @@ source <(kubectl completion zsh)
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
+	IFS= read -r -d '' cwd <"$tmp"
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
@@ -94,6 +94,5 @@ alias killport='f() { kill $(lsof -t -i:$1); unset -f f; }; f'
 # ===== Load Local Configuration =====
 # Load machine-specific configuration if it exists
 if [ -f "$HOME/.zshrc.local" ]; then
-  source "$HOME/.zshrc.local"
+	source "$HOME/.zshrc.local"
 fi
-

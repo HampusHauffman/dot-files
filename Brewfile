@@ -32,6 +32,7 @@ brew "tmux"
 
 # Text editor
 brew "neovim"
+brew "tree-sitter-cli"
 
 # Development tools
 brew "mise"

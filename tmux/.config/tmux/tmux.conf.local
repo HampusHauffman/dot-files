@@ -140,12 +140,15 @@ tmux_conf_theme=enabled
 #tmux_conf_theme_colour_17="colour15"
 
 # Catppuccin (Mocha)
-tmux_conf_theme_colour_1="#181825"   # bg
-tmux_conf_theme_colour_2="#181825"   # mantle
+#tmux_conf_theme_colour_1="#181825"   # bg
+tmux_conf_theme_colour_1="#000000"   # bg
+#tmux_conf_theme_colour_2="#181825"   # mantle
+tmux_conf_theme_colour_2="#000000"   # mantle
 tmux_conf_theme_colour_3="#cdd6f4"   # text
 tmux_conf_theme_colour_4="#89b4fa"   # blue
 tmux_conf_theme_colour_5="#f9e2af"   # yellow
-tmux_conf_theme_colour_6="#181825"   # bg
+#tmux_conf_theme_colour_6="#181825"   # bg
+tmux_conf_theme_colour_6="#000000"   # bg
 tmux_conf_theme_colour_7="#cdd6f4"   # text
 tmux_conf_theme_colour_8="#fab387"   # peach
 tmux_conf_theme_colour_9="#f9e2af"   # yellow
@@ -153,8 +156,10 @@ tmux_conf_theme_colour_10="#f5c2e7"  # pink
 tmux_conf_theme_colour_11="#a6e3a1"  # green
 tmux_conf_theme_colour_12="#bac2de"  # subtext0
 tmux_conf_theme_colour_13="#cdd6f4"  # text
-tmux_conf_theme_colour_14="#181825"  # bg
-tmux_conf_theme_colour_15="#181825"  # mantle
+#tmux_conf_theme_colour_14="#181825"  # bg
+tmux_conf_theme_colour_14="#000000"  # bg
+#tmux_conf_theme_colour_15="#181825"  # mantle
+tmux_conf_theme_colour_15="#000000"  # mantle
 tmux_conf_theme_colour_16="#f38ba8"  # red
 tmux_conf_theme_colour_17="#cdd6f4"  # text
 
