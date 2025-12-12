@@ -44,6 +44,8 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # ===== Aliases =====
+
+alias ip="ipconfig getifaddr en0"
 # Neovim
 alias v="nvim"
 
