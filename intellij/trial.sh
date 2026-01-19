@@ -1,15 +1,9 @@
 #!/bin/bash
 
-if [ "$1" = "--launch-agent" ]; then
-  PROCESS=(idea webstorm datagrip phpstorm clion pycharm goland rubymine rider)
-  COMMAND_PRE=("${PROCESS[@]/#/MacOS/}")
+for product in IntelliJIdea WebStorm DataGrip PhpStorm CLion PyCharm GoLand RubyMine Rider RustRover; do
+  echo "Closing $product"
+  ps aux | grep -i MacOs/$product | tr -s " " | cut -d " " -f 2 | xargs kill -9
 
-  # Kill all Intellij applications
-  kill -9 `ps aux | egrep $(IFS=$'|'; echo "${COMMAND_PRE[*]}") | awk '{print $2}'`
-fi
-
-# Reset Intellij evaluation
-for product in IntelliJIdea WebStorm DataGrip PhpStorm CLion PyCharm GoLand RubyMine Rider; do
   echo "Resetting trial period for $product"
 
   echo "removing evaluation key..."
@@ -32,11 +26,8 @@ rm -f ~/Library/Preferences/com.apple.java.util.prefs.plist
 rm -f ~/Library/Preferences/com.jetbrains.*.plist
 rm -f ~/Library/Preferences/jetbrains.*.*.plist
 
+echo "restarting cfprefsd"
+killall cfprefsd
+
 echo
 echo "That's it, enjoy ;)"
-
-# Flush preference cache
-if [ "$1" = "--launch-agent" ]; then
-  killall cfprefsd
-  echo "Evaluation was reset at $(date)" >> ~/Scripts/logs
-fi
