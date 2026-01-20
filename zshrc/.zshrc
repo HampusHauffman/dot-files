@@ -11,6 +11,8 @@ export VISUAL='nvim'
 export GIT_EDITOR='nvim'
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
+export XDG_CONFIG_HOME="$HOME/.config"
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 
 # ===== Tool Initialization ===== Mise runtime version manager
 eval "$(mise activate zsh)"
