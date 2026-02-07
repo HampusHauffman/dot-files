@@ -36,6 +36,7 @@ brew "tree-sitter-cli"
 
 # Development tools
 brew "mise"
+brew "gradle-completion"
 
 cask "bitwarden"
 # Favorite casks

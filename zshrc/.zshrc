@@ -1,10 +1,3 @@
-# Autocomplete
-autoload -Uz compinit && compinit
-
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey '^E' edit-command-line
-
 # Environment variables
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -13,6 +6,7 @@ export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
+export PATH=".:$PATH"
 
 # ===== Tool Initialization ===== Mise runtime version manager
 eval "$(mise activate zsh)"
@@ -28,6 +22,16 @@ eval "$(zoxide init zsh)"
 
 # FZF fuzzy finder
 eval "$(fzf --zsh)"
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Autocomplete
+autoload -Uz compinit && compinit
+
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
 
 # Kubectl autocompletion
 source <(kubectl completion zsh)
@@ -95,6 +99,9 @@ alias gconfu="git config user.name"
 # Utility
 alias ag="alias | grep"
 alias killport='f() { kill $(lsof -t -i:$1); unset -f f; }; f'
+
+# Gradle
+alias gw="./gradlew"
 
 # ===== Load Local Configuration =====
 # Load machine-specific configuration if it exists
