@@ -1,4 +1,3 @@
-
 # Brewfile for tools used in .zshrc
 brew "stow"
 
@@ -10,6 +9,7 @@ brew "fzf"
 brew "fd"
 brew "ripgrep"
 brew "wget"
+brew "tldr"
 
 # File management and viewers
 brew "eza"
@@ -36,9 +36,8 @@ brew "tree-sitter-cli"
 
 # Development tools
 brew "mise"
-brew "gradle-completion"
 
+# Casks
 cask "bitwarden"
-# Favorite casks
 cask "arc"
 cask "spotify"
