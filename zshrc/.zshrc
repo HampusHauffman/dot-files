@@ -1,8 +1,9 @@
 # ===== Environment Variables =====
 export EDITOR='nvim'
 export VISUAL='nvim'
-export GIT_EDITOR='nvim'
 export LANG=en_US.UTF-8
+
+export GIT_EDITOR='nvim'
 export GPG_TTY=$(tty)
 export XDG_CONFIG_HOME="$HOME/.config"
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
@@ -10,6 +11,27 @@ export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 # Prepend user's local bin and current directory to PATH
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=".:$PATH"
+
+# ===== Zsh Configuration =====
+# Completions
+autoload -Uz compinit && compinit
+source <(kubectl completion zsh)
+
+# Keybindings
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^E' edit-command-line
+
+# Up-arrow history search matching current input
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+# ===== BREW =====
+if [[ "$(uname)" == "Darwin" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ "$(uname)" == "Linux" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+fi
 
 # ===== Tool Initialization =====
 # Mise runtime version manager
@@ -27,41 +49,17 @@ eval "$(zoxide init zsh)"
 # FZF fuzzy finder
 eval "$(fzf --zsh)"
 
-# ===== Zsh Configuration =====
-# Completions
-autoload -Uz compinit && compinit
-source <(kubectl completion zsh)
-
-# Keybindings
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey '^E' edit-command-line
-# Up-arrow history search matching current input
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
 
 # ===== Functions =====
 # Yazi file manager integration to change directory on quit
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if IFS= read -r -d '' cwd <"$tmp" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
-# ===== OS-Specific Configuration =====
-if [[ "$(uname)" == "Darwin" ]]; then
-  # macOS-specific commands
-  if command -v /opt/homebrew/bin/brew &> /dev/null; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if IFS= read -r -d '' cwd <"$tmp" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+	  builtin cd -- "$cwd"
   fi
-  alias ip="ipconfig getifaddr en0"
-elif [[ "$(uname)" == "Linux" ]]; then
-  # Note: 'eth0' might need to be changed to your actual network interface
-  alias ip="ip addr show eth0 | grep 'inet ' | awk '{print \$2}' | cut -d/ -f1"
-fi
+  rm -f -- "$tmp"
+}
 
 # ===== Aliases =====
 # Navigation and File Management
