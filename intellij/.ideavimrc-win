@@ -5,21 +5,30 @@ set belloff=all
 set clipboard+=unnamedplus
 
 nnoremap ö $
+vnoremap ö $
 
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-"nnoremap <C-f> :action ReformatCode
+" Make sure C-j and C-k are using vim (in ideavim settings)
+inoremap <C-j> <down>
+inoremap <C-k> <up>
+
 nnoremap fg :action FindInPath<CR>
 nnoremap ff :action GotoFile<CR>
 
-" Go to next / previous error
 nnoremap <C-n> :action GotoNextError<CR>
 nnoremap <C-p> :action GotoPreviousError<CR>
 
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gr :action GotoDeclaration<CR>
 nnoremap gR :action FindUsages<CR>
+
+vnoremap <C-j> :action EditorSelectNextOccurrence<CR>
+vnoremap <C-k> :action EditorUnselectLastOccurrence<CR>
+
+vnoremap <C-k> :action EditorSelectWord<CR>
+vnoremap <C-j> :action EditorUnSelectWord<CR>
 
 map Q gq
 
