@@ -24,9 +24,7 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap gr :action GotoDeclaration<CR>
 nnoremap gR :action FindUsages<CR>
 
-vnoremap <C-j> :action EditorSelectNextOccurrence<CR>
-vnoremap <C-k> :action EditorUnselectLastOccurrence<CR>
-
+" Inc/Inc-rement selection
 vnoremap <C-k> :action EditorSelectWord<CR>
 vnoremap <C-j> :action EditorUnSelectWord<CR>
 
