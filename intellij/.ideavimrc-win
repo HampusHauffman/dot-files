@@ -1,0 +1,30 @@
+set incsearch
+set visualbell
+set noerrorbells
+set belloff=all
+set clipboard+=unnamedplus
+
+nnoremap ö $
+
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+"nnoremap <C-f> :action ReformatCode
+nnoremap fg :action FindInPath<CR>
+nnoremap ff :action GotoFile<CR>
+
+" Go to next / previous error
+nnoremap <C-n> :action GotoNextError<CR>
+nnoremap <C-p> :action GotoPreviousError<CR>
+
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gr :action GotoDeclaration<CR>
+nnoremap gR :action FindUsages<CR>
+
+map Q gq
+
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
