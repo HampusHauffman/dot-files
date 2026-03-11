@@ -17,6 +17,8 @@ inoremap <C-k> <up>
 nnoremap fg :action FindInPath<CR>
 nnoremap ff :action GotoFile<CR>
 
+nnoremap <S-k> :action ShowHoverInfo<CR>
+
 nnoremap <C-n> :action GotoNextError<CR>
 nnoremap <C-p> :action GotoPreviousError<CR>
 
