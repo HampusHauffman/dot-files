@@ -28,9 +28,6 @@ nnoremap gR :action FindUsages<CR>
 vnoremap <C-k> :action EditorSelectWord<CR>
 vnoremap <C-j> :action EditorUnSelectWord<CR>
 
-map Q gq
-
-
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
