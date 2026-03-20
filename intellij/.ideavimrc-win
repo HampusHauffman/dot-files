@@ -13,6 +13,8 @@ inoremap kj <Esc>
 " Make sure C-j and C-k are using vim (in ideavim settings)
 inoremap <C-j> <down>
 inoremap <C-k> <up>
+nnoremap <C-j> <down>
+nnoremap <C-k> <up>
 
 nnoremap fg :action FindInPath<CR>
 nnoremap ff :action GotoFile<CR>
