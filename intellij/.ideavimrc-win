@@ -16,6 +16,9 @@ inoremap <C-k> <up>
 nnoremap <C-j> <down>
 nnoremap <C-k> <up>
 
+inoremap <C-v> :action EditorPaste<CR>
+
+
 nnoremap fg :action FindInPath<CR>
 nnoremap ff :action GotoFile<CR>
 
