@@ -28,8 +28,10 @@ nnoremap <C-n> :action GotoNextError<CR>
 nnoremap <C-p> :action GotoPreviousError<CR>
 
 nnoremap gi :action GotoImplementation<CR>
+nnoremap gR :action GotoDeclaration<CR>
 nnoremap gr :action GotoDeclaration<CR>
-nnoremap gR :action FindUsages<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
 
 " Inc/Inc-rement selection
 vnoremap <C-k> :action EditorSelectWord<CR>
