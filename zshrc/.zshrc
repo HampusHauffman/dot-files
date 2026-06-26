@@ -15,7 +15,6 @@ export PATH=".:$PATH"
 # ===== Zsh Configuration =====
 # Completions
 autoload -Uz compinit && compinit
-source <(kubectl completion zsh)
 
 # Keybindings
 autoload -Uz edit-command-line

@@ -1,8 +1,10 @@
 [tools]
-cargo = "latest"
 go = "latest"
 java = "21"
 node = "latest"
 npm = "latest"
 python = "latest"
 rust = "latest"
+
+[settings.python]
+compile = false
