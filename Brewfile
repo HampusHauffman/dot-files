@@ -28,6 +28,7 @@ brew "rustup"
 
 # Terminal
 cask "kitty"
+brew "gawk"
 brew "tmux"
 
 # Text editor

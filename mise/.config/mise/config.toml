@@ -1,6 +1,6 @@
 [tools]
 go = "latest"
-java = "21"
+java = "25"
 node = "latest"
 npm = "latest"
 python = "latest"
